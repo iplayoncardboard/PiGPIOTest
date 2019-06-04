@@ -1,4 +1,5 @@
 const express = require('express');
+const gpioController = require('./gpio/gpioController');
 // const gpioController = require('./gpio/gpioController');
 let app = express();
 let PORT = 3000;
@@ -14,6 +15,8 @@ app.get('/', (req, res)=> {
 })
 
 app.use(routes)
+
+gpioController.initialzeLEDs();
 
 app.listen(PORT,  ()=>{
     console.log(`Listening on port ${PORT}`);

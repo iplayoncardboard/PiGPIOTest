@@ -6,10 +6,12 @@ const redLED = new Gpio(22,'out');
 const LEDArray = [greenLED, yellowLED,redLED]
 //Initialize LEDs
 
-
+exports.initialzeLEDs = function () {
 LEDArray.forEach((LED)=>{
-    LED.write(0);
+    LED.write(1);
 });
+
+}
 
 exports.toggleLED = function  (LED) {
     switch(LED.toLowerCase()){
