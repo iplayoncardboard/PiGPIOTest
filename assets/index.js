@@ -9,7 +9,15 @@ document.querySelector('.green').addEventListener('click', (event)=>{
     toggleLight('green');
 });
 
+document.querySelector('.yellow').addEventListener('click', (event)=>{
+    console.log('Toggling yellow');
+    toggleLight('yellow');
+});
 
+document.querySelector('.red').addEventListener('click', (event)=>{
+    console.log('Toggling Red');
+    toggleLight('red');
+});
 function toggleLight(LEDColor) {
 
     let httpRequest = new XMLHttpRequest();
