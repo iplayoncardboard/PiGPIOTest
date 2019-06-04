@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/iplayoncardboard/PiGPIOTest#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "onoff": "^4.1.1",
     "pug": "^2.0.3"
