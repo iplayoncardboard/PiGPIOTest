@@ -3,6 +3,8 @@ const express = require('express');
 let app = express();
 let PORT = 3000;
 
+const routes = require('./routes/letRoutes')
+
 app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/'));
@@ -11,7 +13,7 @@ app.get('/', (req, res)=> {
     res.render('index');
 })
 
-
+app.use(routes)
 
 app.listen(PORT,  ()=>{
     console.log(`Listening on port ${PORT}`);

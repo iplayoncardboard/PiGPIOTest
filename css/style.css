@@ -15,6 +15,12 @@
     margin: 10px auto;
 }
 
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
 .red{
     background-color: red;
 }
