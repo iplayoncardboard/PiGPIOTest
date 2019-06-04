@@ -11,7 +11,7 @@ app.get('/', (req, res)=> {
     res.render('index');
 })
 
-toggleController.toggleLED('green');
+// toggleController.toggleLED('green');
 
 app.listen(PORT,  ()=>{
     console.log(`Listening on port ${PORT}`);

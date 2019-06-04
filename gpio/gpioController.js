@@ -16,7 +16,17 @@ exports.toggleLED = function  (LED) {
         case 'green':
             toggle(greenLED);
             break;
+
+        case 'yellow':
+            toggle(yellowLED);
+            break;
+        
+        case 'red':
+            toggle(greenLED);
+            break;
+        default: console.log('NO LED TO TOGGLE');
     }
+    
 }
 
 function toggle(LED) {
