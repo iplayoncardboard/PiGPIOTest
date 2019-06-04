@@ -9,7 +9,7 @@ const LEDArray = [greenLED, yellowLED,redLED]
 exports.initialzeLEDs = function () {
 LEDArray.forEach((LED)=>{
     LED.write(1);
-    setTimeout(LED.write(0), 500);
+    LED.write(0);
 });
 
 }
