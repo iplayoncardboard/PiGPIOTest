@@ -31,7 +31,7 @@ exports.toggleLED = function  (LED) {
 
 function toggle(LED) {
     console.log('Toggling LED', LED);
-    if(LED.write() === 0){
+    if(LED.read() === 0){
         LED.write(1);
         
     } else {
