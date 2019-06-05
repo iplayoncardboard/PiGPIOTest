@@ -17,18 +17,15 @@ LEDArray.forEach((LED)=>{
 exports.toggleLED = function  (LED) {
     switch(LED.toLowerCase()){
         case 'green':
-            toggle(greenLED);
-            console.log('Green State: ', greenLED.read());
+            toggle(greenLED)
             break;
 
         case 'yellow':
             toggle(yellowLED);
-            console.log('Yellow State: ', yellowLED.read());
             break;
         
         case 'red':
             toggle(redLED);
-            console.log('Yellow State: ', redLED.read());
             break;
         default: console.log('NO LED TO TOGGLE');
     }
@@ -38,7 +35,12 @@ exports.toggleLED = function  (LED) {
 function toggle(LED) {
     console.log('Toggling LED', LED);
     if(LED.read() === 0){
-        LED.write(1);
+        LED.write(1, (err, value)=>{
+            if(err){
+                throw err;
+            }
+            console.log('Toggle Success', LED);
+        });
         
     } else {
         LED.write(0);
