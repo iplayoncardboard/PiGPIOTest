@@ -1,6 +1,11 @@
 h1{
     text-align: center;
 }
+
+img {
+    border: .1rem solid black;
+    border-radius: 1rem;
+}
 .btn{
     display: inline-block;
     padding: 20px;
