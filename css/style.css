@@ -1,12 +1,17 @@
 
 
-.btn-container{
-    display: inline-block;
+.btn{
     padding: 20px;
     border: .1em solid grey;
     margin: 5px;
     border-radius: 1rem;
 }
+
+.btn-container{
+    display: inline-block;
+}
+
+
 
 .container{
     width: fit-content;
@@ -17,7 +22,6 @@
 
 .btn.initialize{
     background-color: lightgrey;
-    display: block;
 }
 .green{
     background-color: green;
