@@ -23,12 +23,14 @@ function toggleLight(LEDColor) {
 
     function alertResult() {
         if(httpRequest.readyState === XMLHttpRequest.DONE){
+           
             if(httpRequest.status === 200) {
                 console.log('All Good!');
             }
-        } else {
-            console.warn('Issue Detected: ', httpRequest.statusText);
-        }
+            else {
+                console.warn('Issue Detected: ', httpRequest.statusText);
+            }
+        } 
     }
 
 }
