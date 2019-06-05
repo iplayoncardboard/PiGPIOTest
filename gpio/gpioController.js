@@ -39,7 +39,7 @@ function toggle(LED) {
             if(err){
                 throw err;
             }
-            console.log('Toggle Success', LED);
+            console.log('Toggle Success', 1);
         });
         
     } else {

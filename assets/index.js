@@ -1,9 +1,4 @@
 
-
-
-
-
-
 document.querySelector('.green').addEventListener('click', (event)=>{
     console.log('Toggling Green');
     toggleLight('green');
@@ -23,7 +18,7 @@ function toggleLight(LEDColor) {
     let httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = alertResult;
 
-    httpRequest.open('GET', `/LED/${LEDColor}`);
+    httpRequest.open('POST', `/led/toggle/${LEDColor}`);
     httpRequest.send();
 
     function alertResult() {
