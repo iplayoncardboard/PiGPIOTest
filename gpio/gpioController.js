@@ -5,7 +5,7 @@ const yellowLED = new Gpio(27,'out');
 const redLED = new Gpio(22,'out');
 const LEDArray = [greenLED, yellowLED,redLED]
 
-
+circuitState = {};
 exports.toggleLED = function  (LED) {
     switch(LED.toLowerCase()){
         case 'green':
@@ -38,7 +38,6 @@ function toggle(LED) {
     }
 
 }
-
 
 
 exports.initialzeLEDs = function () {

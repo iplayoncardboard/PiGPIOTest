@@ -1,17 +1,10 @@
-
-
 .btn{
+    display: inline-block;
     padding: 20px;
     border: .1em solid grey;
     margin: 5px;
     border-radius: 1rem;
 }
-
-.btn-container{
-    display: inline-block;
-}
-
-
 
 .container{
     width: fit-content;
@@ -20,7 +13,7 @@
     margin: 10px auto;
 }
 
-.btn.initialize{
+.btn.initalize{
     background-color: lightgrey;
 }
 .green{
