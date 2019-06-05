@@ -4,6 +4,8 @@
     border: .1em solid grey;
     margin: 5px;
     border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .container{
