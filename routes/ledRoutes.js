@@ -9,4 +9,10 @@ router.post('/led/toggle/:color', (req, res)=>{
     return res.status(200).send(`Toggled ${req.params.color}`);
 });
 
+router.post('/led/initailize', (req,res)=>{
+    console.log('Initialializing LEDs');
+    gpioController.initialzeLEDs();
+    return res.status(200).send(`Toggled ${req.params.color}`);
+});
+
 module.exports = router;
