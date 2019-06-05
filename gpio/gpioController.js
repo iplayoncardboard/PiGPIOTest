@@ -9,17 +9,17 @@ circuitState = {};
 exports.toggleLED = function  (LED) {
     switch(LED.toLowerCase()){
         case 'green':
-            return { color: 'green',
-                    LEDstate: toggle(greenLED)};
+             toggle(greenLED);
+             break;
 
         case 'yellow':
-            return { color: 'yellow',
-                    LEDstate: toggle(yellowLED)};
-        
+            toggle(yellowLED);
+            break;
+            
         case 'red':
-            return { color: 'red',
-                     LEDstate: toggle(redLED)};
-
+             toggle(redLED);
+             break;
+             
         default: 
             return {LEDstate: 'Error'}
     }
@@ -29,11 +29,11 @@ exports.toggleLED = function  (LED) {
 function toggle(LED) {
     if(LED.readSync() === 0){
         LED.write(1).then(()=>{
-            return 'On';
+            return 'on';
         });
     } else {
         LED.write(0).then(()=>{
-            return {LEDstate: 'Off'};
+            return 'off';
         });
     }
 
