@@ -3,9 +3,10 @@ h1{
 }
 
 img{
-    border: .1rem solid black;
+    display: block;
+    margin: 5px;
     border-radius: 1rem;
-    width: 50%;
+    width: 45%;
 }
 .btn{
     display: inline-block;
