@@ -18,14 +18,17 @@ exports.toggleLED = function  (LED) {
     switch(LED.toLowerCase()){
         case 'green':
             toggle(greenLED);
+            console.log('Green State: ', greenLED.read());
             break;
 
         case 'yellow':
             toggle(yellowLED);
+            console.log('Yellow State: ', yellowLED.read());
             break;
         
         case 'red':
-            toggle(greenLED);
+            toggle(redLED);
+            console.log('Yellow State: ', redLED.read());
             break;
         default: console.log('NO LED TO TOGGLE');
     }
