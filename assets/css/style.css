@@ -2,9 +2,10 @@ h1{
     text-align: center;
 }
 
-img {
+img{
     border: .1rem solid black;
     border-radius: 1rem;
+    width: 50%;
 }
 .btn{
     display: inline-block;

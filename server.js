@@ -8,7 +8,7 @@ const routes = require('./routes/ledRoutes')
 
 app.set('view engine', 'pug');
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/assets'));
 
 app.get('/', (req, res)=> {
     res.render('index', {greenStatus: 'Off', yellowStatus: 'Off', redStatus: 'Off'});
