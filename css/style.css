@@ -1,6 +1,6 @@
 
 
-.btn{
+.btn-container{
     display: inline-block;
     padding: 20px;
     border: .1em solid grey;
@@ -15,7 +15,7 @@
     margin: 10px auto;
 }
 
-.btn .initialize{
+.btn.initialize{
     background-color: lightgrey;
     display: block;
 }

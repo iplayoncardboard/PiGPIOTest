@@ -11,7 +11,7 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/'));
 
 app.get('/', (req, res)=> {
-    res.render('index');
+    res.render('index', {greenStatus: 'Off', yellowStatus: 'Off', redStatus: 'Off'});
 })
 
 app.use(routes)

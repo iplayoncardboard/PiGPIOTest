@@ -3,9 +3,17 @@ head
 body
     div(class="container")
         h1 PI GPIO TEST
-        div(class="btn green") Green Button
-        div(class="btn yellow") Yellow Button
-        div(class="btn red") Red Button
-        div(class= "btn initialize") Initalize LEDs
+        div(class= "btn-container")
+            div(class="btn green") Green Button
+            p(class= "light-status-label")  #{greenStatus}
+        div(class= "btn-container")  
+            div(class="btn yellow") Yellow Button
+            p(class= "light-status-label") #{yellowStatus}
+        div(class= "btn-container")  
+            div(class="btn red") Red Button
+            p(class= "light-status-label") #{redStatus}
+        div(class= "btn-container")
+            div(class= "btn initialize") Initalize LEDs
+            p(class= "light-status-label")
 
     script(src="./assets/index.js" type="text/javascript")
