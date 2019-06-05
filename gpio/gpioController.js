@@ -4,44 +4,46 @@ const greenLED = new Gpio(17,'out');
 const yellowLED = new Gpio(27,'out');
 const redLED = new Gpio(22,'out');
 const LEDArray = [greenLED, yellowLED,redLED]
-//Initialize LEDs
 
-exports.initialzeLEDs = function () {
-LEDArray.forEach((LED)=>{
-    LED.write(1);
-    LED.write(0);
-});
-
-}
 
 exports.toggleLED = function  (LED) {
     switch(LED.toLowerCase()){
         case 'green':
-            toggle(greenLED)
-            break;
+            return { color: 'green',
+                    LEDstate: toggle(greenLED)};
 
         case 'yellow':
-            toggle(yellowLED);
-            break;
+            return { color: 'yellow',
+                    LEDstate: toggle(yellowLED)};
         
         case 'red':
-            toggle(redLED);
-            break;
-        default: console.log('NO LED TO TOGGLE');
+            return { color: 'red',
+                     LEDstate: toggle(redLED)};
+
+        default: 
+            return {LEDstate: 'Error'}
     }
     
 }
 
 function toggle(LED) {
-    console.log('Toggling LED', LED);
     if(LED.readSync() === 0){
         LED.write(1).then(()=>{
-            return true;
+            return 'On';
         });
     } else {
         LED.write(0).then(()=>{
-            return false;
+            return {LEDstate: 'Off'};
         });
     }
 
 }
+
+
+
+exports.initialzeLEDs = function () {
+    LEDArray.forEach((LED)=>{
+        LED.write(1);
+        LED.write(0);
+    });
+    }

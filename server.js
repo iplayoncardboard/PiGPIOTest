@@ -4,7 +4,7 @@ const gpioController = require('./gpio/gpioController');
 let app = express();
 let PORT = 3000;
 
-let routes = require('./routes/ledRoutes')
+const routes = require('./routes/ledRoutes')
 
 app.set('view engine', 'pug');
 
