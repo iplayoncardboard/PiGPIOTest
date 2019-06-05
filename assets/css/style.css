@@ -12,7 +12,7 @@ img{
     display: inline-block;
     padding: 20px;
     border: .1em solid grey;
-    margin: 5px auto;
+    margin: 5px;
     border-radius: 1rem;
     font-size: 1.2rem;
     font-weight: 700;
@@ -23,8 +23,11 @@ img{
     border: .1em solid black;
     padding: 10px;
     margin: 10px auto;
+    width: 45vw;
 }
-
+.btn-container{
+    text-align: center;
+}
 .btn.initialize{
     background-color: lightgrey;
 }
