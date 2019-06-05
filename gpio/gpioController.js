@@ -35,12 +35,13 @@ exports.toggleLED = function  (LED) {
 function toggle(LED) {
     console.log('Toggling LED', LED);
     if(LED.readSync() === 0){
-        LED.write(1).then((resp)=>{
-            console.log('resp' ,resp);
+        LED.write(1).then(()=>{
+            return true;
         });
-        
     } else {
-        LED.write(0);
+        LED.write(0).then(()=>{
+            return false;
+        });
     }
 
 }
